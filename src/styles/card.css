@@ -1,0 +1,111 @@
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    padding: 16px;
+}
+
+.card-header{
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.card-header h3{
+    font-size: 18px;
+    font-weight: bold;
+    color: #c9145f;
+    margin: 0;
+    white-space: nowrap;  
+    overflow: hidden;  
+    text-overflow: ellipsis;
+    max-width: 300px;
+}
+
+.task-card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 16px;
+    min-height: 220px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-left: 5px solid #c9145f;
+    transition: transform 0.3s ease-in-out;
+}
+
+
+.task-card p {
+    color: #656565;
+    font-size: 16px;
+    margin: 5px 0;
+    white-space: normal;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.task-card .button-container {
+    margin-top: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.task-meta span{
+    color: #656565;
+}
+
+.card-action{
+    margin-top: 16px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 16px;
+}
+
+.card-action .btn {
+    display: flex; 
+    align-items: center; 
+    gap: 8px; 
+    padding: 10px 16px;
+    font-weight: 600;
+    font-size: medium;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.card-action .secondary{
+    background-color: #fff;
+    border: 2px solid #c9145f;
+    color: #c9145f;
+}
+
+.card-action .primary{
+    background-color: #c9145f;
+    border: none;
+    color: #efefef;;
+}
+
+.card-action .secondary:hover {
+    background-color: #c9145f16;
+}
+
+.card-action .primary:hover{
+    background-color: #c9145fcb;
+}
+
+@media (max-width: 1024px) {
+    .card-container {
+       grid-template-columns: repeat(2, 1fr);
+    }
+ }
+ 
+ @media (max-width: 768px) {
+    .card-container {
+       grid-template-columns: repeat(1, 1fr);
+    }
+ }
+ 
