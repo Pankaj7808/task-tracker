@@ -3,6 +3,8 @@ import { useRouter } from "next/navigation";
 import React, { useEffect, useState } from "react";
 import moment from "moment";
 import { MdEdit } from "react-icons/md";
+import { TbSubtask } from "react-icons/tb";
+import { FaNotesMedical } from "react-icons/fa6";
 import "@/styles/taskDetails.css";
 import "@/styles/card.css";
 import Status from "./Status";
@@ -65,8 +67,16 @@ function TaskDetails({ id }) {
   return (
     <div className="task-container">
       <div className="action">
-        <button className="tertiary btn" onClick={handleEditClick}>
-          <MdEdit size={20} />
+        <button className="tertiary btn">
+          <TbSubtask size={20} />
+          <span>Subtask</span>
+        </button>
+        <button className="tertiary btn">
+          <FaNotesMedical size={20} />
+          <span>Add Note</span>
+        </button>
+        <button className="primary-btn" onClick={handleEditClick}>
+          <MdEdit size={18} />
           <span>Edit</span>
         </button>
       </div>
